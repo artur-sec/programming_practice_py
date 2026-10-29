@@ -1,7 +1,7 @@
 # programming_practice_py
 Python Programming Practice
 
-This repository contains my solutions to Python programming worksheets as I develop my programming skills.
+This repository contains my solutions to Python programming worksheets in Royal Holloway University as I develop my programming skills.
 
 Topics Covered:
 -Variables
