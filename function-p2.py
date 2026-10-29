@@ -79,9 +79,83 @@ display_messages(lst)
 #=========================================
 
 #=========================================
-
+# Worksheet 2:
 #=========================================
 
+#=========================================
+# Task 1: Write a function greet that takes a name parameter and an optional greeting parameter with a default value of "Hello". 
+# When called, the function should print the greeting followed by the name. How would you call this function with only the name argument?
+def greet(name, greeting="Hello "):
+    print(greeting, name)
+greet("Artur")
+
+#=========================================
+# Task 2. Create a function calculate_rectangle_area that accepts two positional arguments, length and width, and returns the area of the rectangle.
+# What happens if you call the function with only one argument?
+def calculate_rectangle_area(length, width):
+    area = length * width
+    return area
+print(calculate_rectangle_area(5, 3))
+# if we call the function with only one argument, Python raises a TypeError because the secong argument is missing
+
+#=========================================
+# Task 3. Define a function create_profile that takes two parameters, name and age, with no default values. 
+# Call the function using keyword arguments so that the order of arguments does not matter
+def create_profile(name, age):
+    print(name, age)
+create_profile(age="19", name="Artur")
+
+#=========================================
+# Task 4. Write a function order_item that takes a required positional argument item and an optional keyword argument quantity with a default value of 1. 
+# How would you call this function to specify both the item and quantity?
+def order_item(item, quantity=1):
+    print(item, quantity)
+order_item("Laptop", quantity=3)
+
+#=========================================
+#Task 5. Create a function calculate_sum that can accept any number of numeric arguments 
+# and returns their sum.
+def calculate_sum(*args):
+    return sum(args)
+print(calculate_sum(1, 2, 3, 4, 5))
+
+#=========================================
+# Task 6. Write a function print_profile that accepts a variable number of keyword arguments. 
+# It should print each value on a new line
+
+
+#=========================================
+# Task 7. Write a function increment_counter that increments a global variable counter by 1 each time it is called. 
+# Initialize counter outside the function with a value of 0. 
+# How would you access and modify a global variable inside a function?
+
+
+#=========================================
+# Task 8. Create a function book_ticket that takes two required parameters movie and date, and one optional parameter time with a default value of "7:00 PM". 
+# How would you call this function to book a ticket for a specific movie and date, but with the default time?
+
+
+#=========================================
+# Task 9. 
+
+
+#=========================================
+# Task 10. Write a function log_event that accepts a string event_name as a required parameter, then
+# any number of positional arguments and keyword arguments representing details about the event.
+#It should print event_name, followed by each positional argument and each keyvalue pair in the keyword arguments.
+def log_event(event_name, *args, **kwards):
+    print(f"Event: {event_name}")
+    print("Details:")
+    for arg in args:
+        print(f"- {arg}")
+    for key, value in kwards.items():
+        print(f"- {key}: {value}")
+log_event(
+    "Login Attempt",
+    "User123",
+    "Integrated Foundation Year",
+    Location = "London",
+    Email="user123@rhul.ac.uk")
 #=========================================
 
 #=========================================
