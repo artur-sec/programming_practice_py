@@ -68,7 +68,19 @@ display_messages(lst)
 # Task 6. Start with a copy of your program from question 5.
 # Write a function called send_messages() that prints each text message and moves each message to a new list called sent_messages as it’s printed. 
 # After calling the function, print both of your lists to make sure the messages were moved correctly.
-
+lst = ["Hello World!", 
+       "London is the capital of Great Britain",
+       "My name is Artur",
+       "I'll be back"]
+sent_messages = []
+def send_messages():
+    while lst:
+        message = lst.pop(0)
+        print(message)
+        sent_messages.append(message)
+send_messages()
+print(lst)
+print(sent_messages) 
 
 #=========================================
 
@@ -122,23 +134,37 @@ print(calculate_sum(1, 2, 3, 4, 5))
 #=========================================
 # Task 6. Write a function print_profile that accepts a variable number of keyword arguments. 
 # It should print each value on a new line
-
+def print_profile(**kward):
+    for value in kward.values():
+        print(value)
+print_profile(age=19, name="Artur", city="London")
 
 #=========================================
 # Task 7. Write a function increment_counter that increments a global variable counter by 1 each time it is called. 
 # Initialize counter outside the function with a value of 0. 
 # How would you access and modify a global variable inside a function?
-
+counter = 0
+def increment_counter():
+    global counter
+    counter += 1
+increment_counter()
+increment_counter()
+increment_counter()
+print(counter)
 
 #=========================================
 # Task 8. Create a function book_ticket that takes two required parameters movie and date, and one optional parameter time with a default value of "7:00 PM". 
 # How would you call this function to book a ticket for a specific movie and date, but with the default time?
-
+def book_ticket(movie, date, time="7:00 PM"):
+    print(f"Can I book a ticket for {movie} on {date},{time}")
+book_ticket(movie="Interstellar", date="24.08.2027")
 
 #=========================================
-# Task 9. 
-
-
+# Task 9. Create a function calculate_statistics that accepts a list of numbers and returns the minimum, maximum, and average of the list. 
+# How would you call this function and print the returned values. 
+def calculate_statistics(nums):
+    return min(nums), max(nums), sum(nums)/len(nums)
+print(calculate_statistics([1, 2, 3, 4, 5]))
 #=========================================
 # Task 10. Write a function log_event that accepts a string event_name as a required parameter, then
 # any number of positional arguments and keyword arguments representing details about the event.
